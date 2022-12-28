@@ -1,8 +1,8 @@
 import { Controller, Post, Body, Get } from '@nestjs/common';
 import { CreateBookBody } from '../dtos/create-books-body';
 import { BookViewModel } from '../view-models/book-view-model';
-import { GetBooks } from 'src/app/use-cases/get-books';
-import { CreateBook } from 'src/app/use-cases/create-book';
+import { GetBooks } from 'src/app/use-cases/book/get-books';
+import { CreateBook } from 'src/app/use-cases/book/create-book';
 
 @Controller('books')
 export class BooksController {
