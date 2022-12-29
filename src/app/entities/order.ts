@@ -5,6 +5,7 @@ export type StatusOrderProps =
   | 'CANCELADO'
   | 'PENDENTE'
   | 'APROVADO'
+  | 'EM ROTA'
   | 'ENTREGUE';
 
 export interface OrderProps {
@@ -19,11 +20,15 @@ export class Order {
   private _id: string;
   private props: OrderProps;
 
-  constructor(props: Replace<OrderProps, { createdAt?: Date }>, id?: string) {
+  constructor(
+    props: Replace<OrderProps, { createdAt?: Date; status?: StatusOrderProps }>,
+    id?: string,
+  ) {
     this._id = id ?? randomUUID();
     this.props = {
       ...props,
       createdAt: props.createdAt ?? new Date(),
+      status: props.status ?? 'PENDENTE',
     };
   }
 
