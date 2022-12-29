@@ -1,10 +1,13 @@
 import { randomUUID } from 'crypto';
+import { Replace } from '../helpers/Replace';
 
 export interface BookProps {
   title: string;
   description: string;
   category: string;
   price: number;
+  createdAt: Date;
+
   quantity: number;
 }
 
@@ -12,9 +15,12 @@ export class Book {
   private _id: string;
   private props: BookProps;
 
-  constructor(props: BookProps, id?: string) {
+  constructor(props: Replace<BookProps, { createdAt?: Date }>, id?: string) {
     this._id = id ?? randomUUID();
-    this.props = props;
+    this.props = {
+      ...props,
+      createdAt: props.createdAt ?? new Date(),
+    };
   }
 
   public get id(): string {
@@ -54,5 +60,8 @@ export class Book {
   }
   public set quantity(quantity: number) {
     this.props.quantity = quantity;
+  }
+  public get createdAt(): Date {
+    return this.props.createdAt;
   }
 }
