@@ -8,10 +8,22 @@ datasource db {
 }
 
 model Book {
-  id          String  @id
+  id          String   @id
   title       String
   description String
   category    String
   price       Decimal
-  quantity    Int
+  createdAt   DateTime @default(now())
+  quantity Int
+}
+
+model Order {
+  id            String   @id
+  countItems    Int
+  emailCustomer String
+  total         Decimal
+  createdAt     DateTime @default(now())
+  status        String
+
+  @@index([emailCustomer])
 }
