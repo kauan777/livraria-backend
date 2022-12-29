@@ -12,7 +12,7 @@ export class BooksController {
   async findAllBooks() {
     const { books } = await this.getBooks.execute();
 
-    return { books };
+    return books.map(BookViewModel.toHTTP);
   }
 
   @Post()
