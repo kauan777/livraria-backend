@@ -51,7 +51,7 @@ export class Order {
   }
 
   public get total(): number {
-    return this.props.countItems;
+    return this.props.total;
   }
   public set total(total: number) {
     this.props.total = total;
