@@ -8,7 +8,12 @@ import { Book } from 'src/app/entities/book';
 export class PrismaBooksRepository implements BooksRepository {
   constructor(private prisma: PrismaService) {}
   async findMany(): Promise<Book[]> {
-    const books = await this.prisma.book.findMany();
+    const books = await this.prisma.book.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+
     return books.map(PrismaBookMapper.toDomain);
   }
 
