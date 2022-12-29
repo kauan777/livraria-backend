@@ -9,6 +9,7 @@ export class BookViewModel {
       category: book.category,
       price: book.price,
       quantity: book.quantity,
+      createdAt: book.createdAt,
     };
   }
 }
