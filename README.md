@@ -74,7 +74,8 @@ yarn migrate
 ```bash
 npm run dev
 # ou
-yarn 
+yarn dev (webpack compiler)
+yarn start:dev (hot heload compiler)
 ```
 
 
