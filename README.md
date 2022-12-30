@@ -10,7 +10,7 @@
 
 <br/>
 
-- Clone o projeto: 
+## Clone o projeto: 
 
 ```bash
 git clone https://github.com/kauan777/livraria-backend.git
@@ -18,7 +18,7 @@ git clone https://github.com/kauan777/livraria-backend.git
 
 <br/>
 
-- Crie o banco de dados no seu Postgresql
+## Crie o banco de dados no seu Postgresql
 
 ```mysql
   CREATE DATABASE db_books;
@@ -28,7 +28,7 @@ git clone https://github.com/kauan777/livraria-backend.git
 
 
  
-- Adicione um arquivo .env na raiz do seu projeto com as informações abaixo
+## Adicione um arquivo .env na raiz do seu projeto com as informações abaixo
 
 ```.env
 DATABASE_URL="postgresql://USER:PASSWORD@localhost:PORT/db_books?schema=public"
@@ -36,7 +36,7 @@ DATABASE_URL="postgresql://USER:PASSWORD@localhost:PORT/db_books?schema=public"
 
  <br/>
 
-- Troque as informações no arquivo .env pelas suas:
+## Troque as informações no arquivo .env pelas suas:
 ```js
 // USER = Nome do usuário (normalmente é postgres)
 
@@ -48,7 +48,7 @@ DATABASE_URL="postgresql://USER:PASSWORD@localhost:PORT/db_books?schema=public"
 
 <br/>
 
-- Instale as dependências
+## Instale as dependências
 
 ```bash
 npm install
@@ -58,7 +58,7 @@ yarn
 
 <br/>
 
-- Faça a migração
+## Faça a migração
 
 ```bash
 npm run migrate
@@ -69,7 +69,7 @@ yarn migrate
 
 <br/>
 
-- Comece a usar
+## Comece a usar
 
 ```bash
 npm run dev
