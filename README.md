@@ -18,7 +18,7 @@ git clone https://github.com/kauan777/livraria-backend.git
 
 <br/>
 
-- Crie o banco de dados no seu Postgree
+- Crie o banco de dados no seu Postgresql
 
 ```mysql
   CREATE DATABASE db_books;
